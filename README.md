@@ -1,15 +1,34 @@
-# p4-syntax-highlighter  
-Copy the required syntax files under "/Sublime Text 2/Packages/User" and restart Sublime Text.  
+# p4 syntax highlighter collection 
+The syntax highlighting for P4 is available for VIM, EMACS and Sublime Text 2/3. 
 
-OSX  
----  
-git clone https://github.com/c3m3gyanesh/p4-syntax-highlighter.git  
-cd ./p4-syntax-highlighter  
-<files to copy>  
+## Sublime Text Editor
+You can install the p4-syntax-highlighter package in SublimeText from the package control.
 
-Linux  
------  
-git clone https://github.com/c3m3gyanesh/p4-syntax-highlighter.git  
-cd ./p4-syntax-highlighter  
-<files to copy>  
+## VIM/EMACS Editor
+1. For EMACS:
+      - Copy the P4.el file to the appropriate directory of EMACS on your system.  
+2. For VIM 3 methods are available.
+      - Copy both "ftdetect" & "syntax" directory inside "~/.vim/" on your system.
+      - To use with Vundle plug-in manager, add the following line to your bundle configuration file:  
+        ```Bundle 'c3m3gyanesh/p4-syntax-highlighter-collection', {'rtp': 'vim'}```.
+      - Use the install script:  
+        ```curl -o- -L https://raw.githubusercontent.com/c3m3gyanesh/p4-syntax-highlighter-collection/master/vim/install.sh | bash```.
 
+## Configuration
+* VIM syntax highlighting supports both P4_14 and P4_16. Either format can
+  be disabled by adding one of the following to your `.vimrc` or `.gvimrc`
+  file:
+  ```
+  let p4_no_p4_14 = 1  " Disables P4_14 syntax highlighting
+  let p4_no_p4_16 = 1  " Disables P4_16 syntax highlighting
+  ```
+
+## How to Contribute? 
+* To contribute to the syntax highlighter for VIM and EMACS, please fork this current repo and update the corresponding files. 
+* To contribute to the syntax highlighter for Sublime Text editor, please fork the "https://github.com/c3m3gyanesh/p4-syntax-highlighter.git" project and make your changes.
+
+#### NOTES
+* The Syntax file for VIM and EMACS were created by the following developers. I found them in the mailing list of P4.
+
+1. EMACS - Vladimir Gurevich
+2. VIM   - Antonin Bas
